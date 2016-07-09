@@ -189,7 +189,7 @@ class TestSerializer(unittest.TestCase):
         self.assertTrue("@content" in data)
         self.assertEqual(data["@content"], "http://baz/bar/foo/")
 
-    def test_fields(self):
+    def test_sparse_fields(self):
         class ASerializer(Serializer):
             a = IntField()
             b = IntField(required=False)
