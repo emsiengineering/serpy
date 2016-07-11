@@ -89,8 +89,8 @@ class Serializer(six.with_metaclass(SerializerMeta, SerializerBase)):
     #: The default getter used if :meth:`Field.as_getter` returns None.
     default_getter = operator.attrgetter
 
-    def __init__(self, instance=None, many=False, data=None, context=None, fields=None,
-                 **kwargs):
+    def __init__(self, instance=None, many=False, data=None,
+                 context=None, fields=None, **kwargs):
         if data is not None:
             raise RuntimeError(
                 'serpy serializers do not support input validation')
